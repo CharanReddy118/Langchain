@@ -113,7 +113,7 @@ formatted_agent_chain = (
 ).with_types(input_type=AgentInput, output_type=str)
 
 app = FastAPI()
-add_routes(app,formatted_agent_chain,Path="/agent")
+add_routes(app,formatted_agent_chain,path="/agent")
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
